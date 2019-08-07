@@ -1,6 +1,6 @@
 export const userPostFetch = user => {
   return dispatch => {
-    return fetch("http://localhost:3000/api/users", {
+    return fetch("https://homemgr-api.herokuapp.com/api/users", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ export const userPostFetch = user => {
 
 export const userLoginFetch = user => {
   return dispatch => {
-    return fetch("http://localhost:3000/api/login", {
+    return fetch("https://homemgr-api.herokuapp.com/api/login", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ export const getProfileFetch = () => {
   return dispatch => {
     const token = localStorage.token;
     if (token) {
-      return fetch("http://localhost:3000/api/profile", {
+      return fetch("https://homemgr-api.herokuapp.com/api/profile", {
         method: "GET",
         headers: {
           'Content-Type': 'application/json',

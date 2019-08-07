@@ -29,7 +29,7 @@ export const searchGroceries=(query)=>{
 
     if (token){
     return dispatch => {
-      return fetch("http://localhost:3000/api/grocery_items", {
+      return fetch("https://homemgr-api.herokuapp.com/api/grocery_items", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ export const searchGroceries=(query)=>{
     const token = localStorage.token;
       if (token){
       return dispatch => {
-        return fetch(`http://localhost:3000/api/grocery_items/${id}`, {
+        return fetch(`https://homemgr-api.herokuapp.com/api/grocery_items/${id}`, {
           method: "DELETE",
           headers: {
             Authorization: "Bearer " + token
