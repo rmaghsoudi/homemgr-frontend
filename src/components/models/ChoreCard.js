@@ -12,6 +12,7 @@ const ChoreCard = (props) => {
 
   return (
     // details of a chore into the card structure.
+    <div className="col s6">
     <div className="container section chore-details">
       <div className="card z-depth-0">
         <div className="card-content">
@@ -19,12 +20,12 @@ const ChoreCard = (props) => {
           <p>{props.chore.description}</p>
            { props.chore.complete ? 
            <label>
-            <input type="checkbox" onClick={e => handleComplete(props.chore)} checked="checked"/>
+            <input type="checkbox" onChange={e => handleComplete(props.chore)} checked="checked"/>
             <span>Completed?</span>
             </label>
             :
            <label>
-            <input type="checkbox" onClick={e => handleComplete(props.chore)} />
+            <input type="checkbox" onChange={e => handleComplete(props.chore)} />
             <span>Completed?</span>
            </label> }
         </div>
@@ -33,6 +34,7 @@ const ChoreCard = (props) => {
           <div>Due: {props.chore.due.slice(0, 10)}</div>
         </div>
       </div>
+    </div>
     </div>
   )
 }

@@ -7,7 +7,7 @@ class ChorePage extends Component {
   render(){
   return (
     <div className="chore-page section">
-      <h5 className="white-text">Chores<Link to="/create-chore" className="large material-icons">add_box</Link></h5>
+      
       <ChoreList />
     </div>
     )

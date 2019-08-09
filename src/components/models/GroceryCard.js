@@ -31,11 +31,11 @@ class GroceryCard extends Component {
   render() {
   return (
     <>
-        <div className="col s6">
+        <div className="col s4">
 
         {this.state.redirect}
         <div className="card small">
-        <div className="card-image waves-effect waves-block waves-light">
+        <div className="card-image waves-effect waves-block waves-light grocery-image">
           <img className="activator" src={this.props.product.image} />
         </div>
         <div className="card-content">
