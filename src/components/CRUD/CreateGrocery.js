@@ -42,7 +42,7 @@ class CreateGrocery extends Component {
         {Array.isArray(this.props.searchResults) && this.props.searchResults.length ?
           this.props.searchResults[0].products.map(product => <GroceryCard product={product} />) : null
         }
-        </div>
+        </div>              
       </div>
     )
   }
