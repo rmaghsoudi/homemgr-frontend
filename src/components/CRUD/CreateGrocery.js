@@ -38,9 +38,11 @@ class CreateGrocery extends Component {
             <Link to="/" ><button className="btn indigo lighten-1">Cancel</button></Link>
           </div>
         </form>
+        <div className="row">
         {Array.isArray(this.props.searchResults) && this.props.searchResults.length ?
           this.props.searchResults[0].products.map(product => <GroceryCard product={product} />) : null
         }
+        </div>
       </div>
     )
   }

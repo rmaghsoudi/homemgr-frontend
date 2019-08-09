@@ -7,7 +7,8 @@ import {deleteChore} from '../../store/actions/choreActions'
 class GroceryList extends Component {
   render() {
   return (
-    <div className="container">
+    <div className="grocery-list container">
+        <div className="row">
       
 
     {Array.isArray(this.props.groceries) && this.props.groceries.length ?
@@ -22,7 +23,7 @@ class GroceryList extends Component {
             </div>
     }
 
-
+    </div>
     </div>
   )}
   }

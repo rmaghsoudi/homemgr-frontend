@@ -4,6 +4,12 @@ body {
   overflow: visible;
 }
 
+.card .card-image img {
+  margin: auto !important;
+  width: 231px !important;
+  height: 231px !important;
+}
+
 .opacity {
   opacity: .95;
 }
