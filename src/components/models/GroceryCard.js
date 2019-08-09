@@ -22,32 +22,38 @@ class GroceryCard extends Component {
     e.preventDefault()
 
     let id = this.props.currentUser.id
-    let arr = this.props.searchResults[0].products.filter(item => item.title == e.target.parentNode.previousSibling.innerText)
-    console.log(arr)
+    let arr = this.props.searchResults[0].products.filter(item => item.title == e.target.parentNode.previousSibling.innerText.slice(0, -10))
+
     this.props.addGrocery(arr[0], id)
     this.setState({redirect: <Redirect to="/groceries"/>})
   }
 
   render() {
   return (
-        <div className="row">
+    <>
+        <div className="col s6">
+
         {this.state.redirect}
-        <div className="col s6 offset-s3">
-          <div className="card">
-            <div className="card-image">
-              <img src={this.props.product.image} />
-            </div>
-            <div className="card-content">
-            <span className="card-title indigo-text lighten-1">{this.props.product.title}</span>
-            {this.props.location ?
-                    <a className="btn-floating waves-effect waves-light indigo lighten-1"><i className="material-icons" onClick={this.handleDelete}>clear</i></a>
-                    :
-                    <a className="btn-floating waves-effect waves-light indigo lighten-1"><i className="material-icons" onClick={this.handleAdd}>add</i></a>
-                }   
-            </div>
-          </div>
+        <div className="card small">
+        <div className="card-image waves-effect waves-block waves-light">
+          <img className="activator" src={this.props.product.image} />
+        </div>
+        <div className="card-content">
+          <span className="card-title activator grey-text text-darken-4">{this.props.product.title}<i className="material-icons right">more_vert</i></span>
+          {this.props.location ?
+            <p><a href="#" onClick={this.handleDelete} >Delete</a></p>
+                        :
+            <p><a href="#" onClick={this.handleAdd} >Add</a></p>
+          }   
+          
+        </div>
+        <div className="card-reveal">
+          <span className="card-title grey-text text-darken-4">{this.props.product.title}<i className="material-icons right">close</i></span>
+          <p>Here is some more information about this product that is only revealed once clicked on.</p>
         </div>
       </div>
+      </div>
+  </>
       )
       }
     }
