@@ -64,6 +64,7 @@ class ChoreList extends Component {
   return (
     <div className="chore-list section">
     <div className="row white">
+
         <div className="col s2 offset-s3" >
           <Select value={this.state.filter} onChange={this.filterChores}>
 						<option value="" disabled>
@@ -80,9 +81,12 @@ class ChoreList extends Component {
 						</option>
 					</Select>
 				</div>
+
         <div className="col s2">
-        <h4>Chores<Link to="/create-chore" className="large material-icons">add_box</Link></h4>
+        <h4>Chores</h4>
+        <h6><Link to="/create-chore">Add Chore</Link></h6>
         </div>
+
         <div className="col s2 offset-s1" >
           <Select value={this.state.sort} onChange={this.sortChores} >
 						<option value="" disabled>
@@ -100,6 +104,7 @@ class ChoreList extends Component {
 					</Select>
 				</div>
         </div>
+
         <div className="row">
       { this.state.chores ? this.state.chores.map(chore => {
         return(
