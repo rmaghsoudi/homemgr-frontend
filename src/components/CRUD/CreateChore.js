@@ -9,28 +9,38 @@ class CreateChore extends Component {
   state = {
     title: '',
     description: '',
-    due: '',
-    occupant_id: this.props.currentUser.occupants[0].id,
+    due: new Date().toISOString().slice(0, 10),
     redirect: false
     }
 
+    //adding componentDidMount to prevent random crash when currentUser occupant isnt detected
+    componentDidMount() {
+      this.setState({
+        ...this.state,
+        user_id: this.props.currentUser.id,
+        occupant_id: this.props.currentUser.occupants[0].id
+      })
+  }
+
   handleChange = (e) => {
-    console.log(this.state)
     e.target ? 
     this.setState({...this.state,
       [e.target.id]: e.target.value,
-      user_id: this.props.currentUser.id
     }) :
     this.setState({
       due: e,
-      user_id: this.props.currentUser.id
     })
   }
  
   handleSubmit =(e) => {
     e.preventDefault();
-    this.props.createChore(this.state)
-    this.setState({redirect: <Redirect to="/chores"/>})
+    //prevents bad data being saved to db and constantly crashing user's app
+    if (this.state.title === '' || this.state.description === '') {
+      alert("Please fill all fields")
+    } else {
+        this.props.createChore(this.state)
+        this.setState({redirect: <Redirect to="/chores"/>})
+    }
   }
 
   render() {
@@ -53,7 +63,7 @@ class CreateChore extends Component {
           <div className="input-field">
                 <DatePicker
               id="due"
-              defaultValue={new Date().toLocaleDateString()}
+              defaultValue={new Date().toISOString().slice(0, 10)}
               className="datepicker"
               onChange={this.handleChange}
             />
