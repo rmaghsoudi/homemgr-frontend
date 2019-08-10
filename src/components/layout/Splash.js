@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 const Splash=()=>{
   return(
     <div className="container">
-    <div className="card large">
+    <div className="card large" style={{ width: '75%', margin: '5em auto 0 auto' }}>
         <div className="card-image">
           <img src={image} alt="Office desk with equipment" />
         </div>

@@ -10,6 +10,10 @@ body {
   height: 231px !important;
 }
 
+/* .container .about {
+  margin-top: 10em !important;
+} */
+
 .opacity {
   opacity: .95;
 }
