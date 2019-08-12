@@ -6,7 +6,7 @@ const groceryReducer=(state=initState, action)=>{
   switch (action.type){
     case 'SEARCH_GROCERIES':
       let newArr = state.searchResults.slice()
-      newArr = [action.payload]
+      newArr = action.payload
       return {...state, searchResults: newArr}
 
     default:
