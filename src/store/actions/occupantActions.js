@@ -2,7 +2,7 @@ export const createOccupant=(occupant)=>{
   const token = localStorage.token;
   if (token){
   return dispatch => {
-    return fetch("https://homemgr-api.herokuapp.com/api/occupants", {
+    return fetch("http://localhost:3000/api/occupants", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -25,7 +25,7 @@ export const deleteOccupant=(occupant)=>{
   const token = localStorage.token;
       if (token){
     return dispatch => {
-      return fetch(`https://homemgr-api.herokuapp.com/api/occupants/${occupant.id}`, {
+      return fetch(`http://localhost:3000/api/occupants/${occupant.id}`, {
         method: "DELETE",
         headers: {
           Authorization: "Bearer " + token

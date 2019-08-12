@@ -63,9 +63,10 @@ class ChoreList extends Component {
   render() {
   return (
     <div className="chore-list section">
-    <div className="row white">
+    <div className="container">
+    <div className="row white chore-page">
 
-        <div className="col s2 offset-s3" >
+        <div className="col s2 offset-s2" >
           <Select value={this.state.filter} onChange={this.filterChores}>
 						<option value="" disabled>
 						Filter By
@@ -82,7 +83,7 @@ class ChoreList extends Component {
 					</Select>
 				</div>
 
-        <div className="col s2">
+        <div className="col s2 offset-s1">
         <h4>Chores</h4>
         <h6><Link to="/create-chore">Add Chore</Link></h6>
         </div>
@@ -103,6 +104,7 @@ class ChoreList extends Component {
 						</option>
 					</Select>
 				</div>
+        </div>
         </div>
 
         <div className="row">
