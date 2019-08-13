@@ -22,7 +22,7 @@ class GroceryCard extends Component {
     e.preventDefault()
 
     let id = this.props.currentUser.id
-    let arr = this.props.searchResults.filter(item => item.title == e.target.parentNode.previousSibling.innerText.slice(0, -10))
+    let arr = this.props.searchResults.filter(item => item.title == e.target.parentNode.parentNode.nextSibling.children[0].innerText.slice(0, -5))
 
     this.props.addGrocery(arr[0], id)
     this.setState({redirect: <Redirect to="/groceries"/>})

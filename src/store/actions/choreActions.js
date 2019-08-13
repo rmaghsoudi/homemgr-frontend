@@ -5,7 +5,7 @@ export const createChore=(chore)=>{
   const token = localStorage.token;
       if (token){
     return dispatch => {
-      return fetch("http://localhost:3000/api/chores", {
+      return fetch("https://homemgr-api.herokuapp.com/api/chores", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
@@ -29,7 +29,7 @@ export const createChore=(chore)=>{
     const token = localStorage.token;
       if (token){
       return dispatch => {
-        return fetch(`http://localhost:3000/api/chores/${id}`, {
+        return fetch(`https://homemgr-api.herokuapp.com/api/chores/${id}`, {
           method: "DELETE",
           headers: {
             Authorization: "Bearer " + token
@@ -51,7 +51,7 @@ export const createChore=(chore)=>{
       let toggle = !chore.complete
         if (token){
         return dispatch => {
-          return fetch(`http://localhost:3000/api/chores/${chore.id}`, {
+          return fetch(`https://homemgr-api.herokuapp.com/api/chores/${chore.id}`, {
             method: "PATCH",
             headers: {
               'Content-Type': 'application/json',
