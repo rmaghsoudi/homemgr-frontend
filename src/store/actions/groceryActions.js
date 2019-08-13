@@ -28,15 +28,19 @@ export const searchGroceries=(state)=>{
 
   export const addGrocery=(item, id)=>{
     const token = localStorage.token;
-  
+
     let title = item.title
     let image = item.image
     let num = item.quantity
     let cat = item.category
+    console.log("number", num)
+    console.log("item", item)
+    console.log("item.quantity", item.quantity)
+
 
     if (token){
     return dispatch => {
-      return fetch("http://localhost:3000/api/grocery_items", {
+      return fetch("https://homemgr-api.herokuapp.com/api/grocery_items", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
@@ -54,8 +58,8 @@ export const searchGroceries=(state)=>{
       .then(data => {
         if (data.message){}
         else {
-          dispatch({ type: 'LOGIN_USER', payload: data.user })
-          // getProfileFetch()
+          dispatch({ type: 'ADD_GROCERY', payload: data.user })
+          getProfileFetch()
         }
       })
     }
@@ -66,7 +70,7 @@ export const searchGroceries=(state)=>{
     const token = localStorage.token;
       if (token){
       return dispatch => {
-        return fetch(`http://localhost:3000/api/grocery_items/${id}`, {
+        return fetch(`https://homemgr-api.herokuapp.com/api/grocery_items/${id}`, {
           method: "DELETE",
           headers: {
             Authorization: "Bearer " + token

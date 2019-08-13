@@ -8,6 +8,9 @@ const groceryReducer=(state=initState, action)=>{
       let newArr = state.searchResults.slice()
       newArr = action.payload
       return {...state, searchResults: newArr}
+    case 'ADD_GROCERY':
+      let arr = []
+      return {...state, searchResults: arr, currentUser: action.payload}
 
     default:
       return state
