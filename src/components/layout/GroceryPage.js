@@ -8,7 +8,12 @@ class GroceryPage extends Component {
   render(){
   return (
     <div className="grocery-page section">
-      <h5 className="white-text">Groceries<Link to="/add-grocery" className="large material-icons">add_box</Link></h5>
+        <div className="container">
+        <div className="row white title-div">
+            <h4>Groceries</h4>
+            <h6><Link to="/add-grocery">Add Grocery</Link></h6>
+         </div>
+         </div>
       <GroceryList location={this.props.location}/>
     </div>
     )

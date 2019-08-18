@@ -10,11 +10,7 @@ body {
   height: 231px !important;
 }
 
-/* .card .card-action:last-child {
-  border-radius: 0 0 15px 15px !important;
-} */
-
-.row.white.chore-page {
+.row.white.title-div {
   border-radius: 15px !important;
 }
 

@@ -64,7 +64,7 @@ class ChoreList extends Component {
   return (
     <div className="chore-list section">
     <div className="container">
-    <div className="row white chore-page">
+    <div className="row white title-div">
 
         <div className="col s2 offset-s2" >
           <Select value={this.state.filter} onChange={this.filterChores}>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import OccupantList from '../models/OccupantList'
 import GeneralList from '../models/GeneralList'
-import {connect} from 'react-redux';
+
 
 class Dashboard extends Component {
   
@@ -10,6 +10,7 @@ class Dashboard extends Component {
     console.log(this.props)
     return (
       <div className="dashboard container">
+
         <div className="row">
           <div className="col s12 m6">
             {this.props.currentUser ? <OccupantList occupants={this.props.currentUser.occupants} /> : null}

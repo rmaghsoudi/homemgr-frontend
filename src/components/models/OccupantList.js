@@ -2,10 +2,16 @@ import React from 'react'
 import OccupantCard from './OccupantCard'
 import {Link} from 'react-router-dom'
 
+
 const OccupantList = ({occupants}) => {
   return (
     <div className="occupant-list section">
-      <h5 className="white-text">Occupants <Link to="/add-occupant" className="large material-icons">add_box</Link></h5>
+    <div className="container">
+        <div className="row white title-div">
+            <h4>Occupants</h4>
+            <h6><Link to="/add-occupant">Add Occupant</Link></h6>
+         </div>
+         </div>
 
       { occupants && occupants.map(occupant => {
         return(

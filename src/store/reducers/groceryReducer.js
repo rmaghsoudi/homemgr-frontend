@@ -1,7 +1,6 @@
 const initState={
   searchResults:[]
 }
-
 const groceryReducer=(state=initState, action)=>{
   switch (action.type){
     case 'SEARCH_GROCERIES':
@@ -10,7 +9,7 @@ const groceryReducer=(state=initState, action)=>{
       return {...state, searchResults: newArr}
     case 'ADD_GROCERY':
       let arr = []
-      return {...state, searchResults: arr, currentUser: action.payload}
+      return {...state, searchResults: arr}
 
     default:
       return state

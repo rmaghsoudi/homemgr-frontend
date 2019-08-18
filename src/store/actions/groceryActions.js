@@ -58,8 +58,8 @@ export const searchGroceries=(state)=>{
       .then(data => {
         if (data.message){}
         else {
-          dispatch({ type: 'ADD_GROCERY', payload: data.user })
-          getProfileFetch()
+          dispatch({ type: 'LOGIN_USER', payload: data.user })
+          dispatch({ type: 'ADD_GROCERY'})
         }
       })
     }
@@ -70,7 +70,7 @@ export const searchGroceries=(state)=>{
     const token = localStorage.token;
       if (token){
       return dispatch => {
-        return fetch(`https://homemgr-api.herokuapp.com/api/grocery_items/${id}`, {
+        return fetch(`http://localhost:3000/api/grocery_items/${id}`, {
           method: "DELETE",
           headers: {
             Authorization: "Bearer " + token
