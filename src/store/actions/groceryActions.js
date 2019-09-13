@@ -70,7 +70,7 @@ export const searchGroceries=(state)=>{
     const token = localStorage.token;
       if (token){
       return dispatch => {
-        return fetch(`http://localhost:3000/api/grocery_items/${id}`, {
+        return fetch(`https://homemgr-api.herokuapp.com/api/grocery_items/${id}`, {
           method: "DELETE",
           headers: {
             Authorization: "Bearer " + token
