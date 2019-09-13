@@ -1,68 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# HomeMgr
 
-## Available Scripts
+   Welcome to your personal Home Manager! You'll be able to manage chores, groceries, and occupants. You can create new chores and assigning an occupant to that chore; as well as finding and adding groceries to your list to keep track of your supplies. This app was made with ReactJS, Redux, and Materialize for the frontend; It also utilizes a custom Ruby on Rails API on the backend as well as an external Food API, made by Spoonacular, for the grocery search.
 
-In the project directory, you can run:
+Designed and Built by: Romy Maghsoudi![HomePage](https://user-images.githubusercontent.com/43018235/64891254-6c505b00-d63f-11e9-958d-6721ef01c248.png)
+## Using the app
 
-### `npm start`
+   You'll have the option to either sign up or login to use the site. Once logged in, you'll be shown your dashboard that contains the occupants of the household and information regarding the grocery/chore pages.![Dashboard](https://user-images.githubusercontent.com/43018235/64891273-77a38680-d63f-11e9-99bc-7c82db5092c3.png)On the chore page, you'll be able to delete chores or mark them as completed. You can also add chores by giving it a title, description, who'll be doing it, and when it's due.![Chores Page](https://user-images.githubusercontent.com/43018235/64891283-7f632b00-d63f-11e9-8f4f-7a88b0387408.png)On the groceries page, you can click the grocery card to reveal its info, such as the full name, category, and quantity. You can add a grocery by searching it by name, defining a quantity, and selecting the appropriate category. Once you search, results will render on the page after it sends your query to the Food API. You can then select the desired grocery and it'll be added to your page.![Groceries Page](https://user-images.githubusercontent.com/43018235/64891294-8853fc80-d63f-11e9-95f9-9217b47e8b26.png)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### The app is currently deployed at https://homemgr-4a8ec.firebaseapp.com/
